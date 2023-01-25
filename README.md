@@ -1,0 +1,1 @@
+This displays Covid-19_Stats of Nepal.
