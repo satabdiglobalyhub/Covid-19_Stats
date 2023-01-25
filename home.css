@@ -1,0 +1,38 @@
+* {
+  font-family: "Rubik", "sans-serif";
+}
+
+.backgroung-image {
+  background-image: url("/pictures/corona.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.body-head {
+  display: flex;
+  justify-content: center;
+  font-size: xx-large;
+}
+
+.body-stats {
+  display: flex;
+  flex-direction: column;
+  margin-top: 75px;
+}
+
+.body-active {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: x-large;
+  align-items: center;
+}
+
+.body-total {
+  display: flex;
+  justify-content: space-around;
+  font-size: larger;
+  margin-top: 100px;
+}
