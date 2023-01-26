@@ -19,7 +19,15 @@
 .body-stats {
   display: flex;
   flex-direction: column;
-  margin-top: 75px;
+  /* margin-top: 75px; */
+}
+
+.body-today{
+  display: flex;
+  justify-content: space-around;
+  font-size: larger;
+  align-items: center;
+  margin-top: 80px;
 }
 
 .body-active {
@@ -30,9 +38,58 @@
   align-items: center;
 }
 
+.body-active:hover{
+  color: orange;
+  font-size: xx-large;
+}
+
 .body-total {
   display: flex;
   justify-content: space-around;
   font-size: larger;
-  margin-top: 100px;
+  align-items: center;
+  margin-top: 80px;
 }
+
+.body-total-confirmed{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.body-total-confirmed:hover{
+  color:yellow;
+  font-size: xx-large;
+}
+
+.body-total-recovered{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.body-total-recovered:hover{
+  color: darkgreen;
+  font-size: xx-large;
+}
+
+.body-total-death{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.body-total-death:hover{
+color:red;
+font-size: xx-large;
+}
+
+.body-updated {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: larger;
+  align-items: center;
+  margin-top: 50px;
+}
+

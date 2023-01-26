@@ -16,34 +16,44 @@
   </head>
   <body class="backgroung-image">
     <section class="body-head">
-      <h1> LIVE COVID-19 STATS IN NEPAL</h1>
+      <h1>LIVE COVID-19 STATS IN NEPAL</h1>
     </section>
     <section class="body-stats">
-      <div class="body-active" id="activeCases">
-        <div><h1>Active Cases</h1></div>
-        <div>1</div>
+      <div class="body-today">
+        <div class="body-active">
+          <div><h1>Active Cases</h1></div>
+          <div id="activeCases"></div>
+        </div>
+        <div class="body-total-recovered">
+          <div>
+            <h1>Recovered</h1>
+          </div>
+          <div id="recoveredCases"></div>
+        </div>
       </div>
       <div class="body-total">
-        <div>
+        <div class="body-total-confirmed">
           <div><h1>Total Confirmed</h1></div>
-          <div>1</div>
+          <div id="conformedCases"></div>
         </div>
-        <div>
+        <!-- <div class="body-total-recovered">
           <div>
-            <h1>Total Recovered</h1>
+            <h1>Recovered</h1>
           </div>
-          <div>1</div>
-        </div>
-        <div>
+          <div id="recoveredCases"></div>
+        </div> -->
+        <div class="body-total-death">
           <div>
-            <h1>Total Death</h1>
+            <h1>Total Deaths</h1>
           </div>
-          <div>1</div>
+          <div id="totalDeaths"></div>
         </div>
       </div>
-      <div >
-        <div>Last Updated on</div>
-        <div>1</div>
+      <div class="body-updated">
+        <div>
+          <h1>Last Updated on</h1>
+        </div>
+        <div id="bodyUpdated"></div>
       </div>
     </section>
   </body>
