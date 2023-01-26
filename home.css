@@ -19,7 +19,6 @@
 .body-stats {
   display: flex;
   flex-direction: column;
-  /* margin-top: 75px; */
 }
 
 .body-today {
@@ -39,9 +38,12 @@
 }
 
 .body-active:hover {
-  color: orange;
   transition: all 0.6s ease-in-out;
   transform: scale(1.5);
+  background-color:orange;
+  color:white ;
+  border-radius: 5px;
+  box-shadow: 2px 4px grey;
 }
 
 .body-total {
@@ -59,9 +61,12 @@
 }
 
 .body-total-confirmed:hover {
-  color: yellow;
+  background-color: goldenrod;
+  color: white;
   transition: all 0.6s ease-in-out;
   transform: scale(1.5);
+  border-radius: 5px;
+  box-shadow: 2px 4px grey;
 }
 
 .body-total-recovered {
@@ -71,10 +76,12 @@
 }
 
 .body-total-recovered:hover {
-  color: darkgreen;
-  /* font-size: xx-large; */
+  color: white;
+  background-color: darkgreen;
   transition: all 0.6s ease-in-out;
   transform: scale(1.5);
+  border-radius: 5px;
+  box-shadow: 2px 4px grey;
 }
 
 .body-total-death {
@@ -84,10 +91,12 @@
 }
 
 .body-total-death:hover {
-  color: red;
-  /* font-size: xx-large; */
+  color: white;
+ background-color: red;
   transition: all 0.6s ease-in-out;
   transform: scale(1.5);
+  border-radius: 5px;
+  box-shadow: 2px 4px grey;
 }
 
 .body-updated {
