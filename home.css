@@ -22,7 +22,7 @@
   /* margin-top: 75px; */
 }
 
-.body-today{
+.body-today {
   display: flex;
   justify-content: space-around;
   font-size: larger;
@@ -38,9 +38,10 @@
   align-items: center;
 }
 
-.body-active:hover{
+.body-active:hover {
   color: orange;
-  font-size: xx-large;
+  transition: all 0.6s ease-in-out;
+  transform: scale(1.5);
 }
 
 .body-total {
@@ -51,37 +52,42 @@
   margin-top: 80px;
 }
 
-.body-total-confirmed{
+.body-total-confirmed {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.body-total-confirmed:hover{
-  color:yellow;
-  font-size: xx-large;
+.body-total-confirmed:hover {
+  color: yellow;
+  transition: all 0.6s ease-in-out;
+  transform: scale(1.5);
 }
 
-.body-total-recovered{
+.body-total-recovered {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.body-total-recovered:hover{
+.body-total-recovered:hover {
   color: darkgreen;
-  font-size: xx-large;
+  /* font-size: xx-large; */
+  transition: all 0.6s ease-in-out;
+  transform: scale(1.5);
 }
 
-.body-total-death{
+.body-total-death {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.body-total-death:hover{
-color:red;
-font-size: xx-large;
+.body-total-death:hover {
+  color: red;
+  /* font-size: xx-large; */
+  transition: all 0.6s ease-in-out;
+  transform: scale(1.5);
 }
 
 .body-updated {
@@ -93,3 +99,55 @@ font-size: xx-large;
   margin-top: 50px;
 }
 
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  .body-stats {
+    display: flex;
+    flex-direction: column;
+  }
+  .body-head {
+    font-size: large;
+  }
+  .body-active,
+  .body-today,
+  .body-total,
+  .body-updated {
+    font-size: medium;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .body-head {
+    font-size: medium;
+  }
+  .body-active,
+  .body-today,
+  .body-total,
+  .body-updated {
+    font-size: small;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  .body-head {
+    font-size: small;
+  }
+  .body-active,
+  .body-today,
+  .body-total,
+  .body-updated {
+    font-size: smaller;
+  }
+  .body-today{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  .body-total {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+  }
+  .body-active,.body-total-recovered,.body-total-confirmed,.body-total-death{
+    padding: 20px;
+  }
+}
