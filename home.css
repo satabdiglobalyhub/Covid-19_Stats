@@ -13,7 +13,45 @@
 .body-head {
   display: flex;
   justify-content: center;
+  cursor: pointer;
+}
+
+.body-head h1 {
   font-size: xx-large;
+}
+
+.body-date-updated {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.body-country {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.body-country form {
+  display: flex;
+}
+
+.body-country input {
+  height: 50px;
+  width: 200px;
+  background-color: rgba(0, 0, 0, 0);
+  border: hidden;
+  margin-left: 10px;
+}
+
+.body-country button {
+  height: 50 px;
+  width: 25 px;
+  background-color: rgba(0, 0, 0, 0);
+  border: hidden;
+  cursor: pointer;
 }
 
 .body-stats {
@@ -29,7 +67,16 @@
   margin-top: 80px;
 }
 
-.body-active {
+.body-today-confirmed,
+.body-today-recovered,
+.body-today-deaths,
+.body-total-confirmed,
+.body-total-recovered,
+.body-total-death {
+  cursor: pointer;
+}
+
+/* .body-today-confirmed {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -37,14 +84,14 @@
   align-items: center;
 }
 
-.body-active:hover {
+.body-today-confirmed:hover {
   transition: all 0.6s ease-in-out;
   transform: scale(1.5);
-  background-color:orange;
-  color:white ;
+  background-color: orange;
+  color: white;
   border-radius: 5px;
   box-shadow: 2px 4px grey;
-}
+} */
 
 .body-total {
   display: flex;
@@ -54,7 +101,7 @@
   margin-top: 80px;
 }
 
-.body-total-confirmed {
+/* .body-total-confirmed {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,21 +139,12 @@
 
 .body-total-death:hover {
   color: white;
- background-color: red;
+  background-color: red;
   transition: all 0.6s ease-in-out;
   transform: scale(1.5);
   border-radius: 5px;
   box-shadow: 2px 4px grey;
-}
-
-.body-updated {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  font-size: larger;
-  align-items: center;
-  margin-top: 50px;
-}
+} */
 
 @media screen and (min-width: 600px) and (max-width: 800px) {
   .body-stats {
@@ -146,7 +184,7 @@
   .body-updated {
     font-size: smaller;
   }
-  .body-today{
+  .body-today {
     display: flex;
     flex-direction: column;
     margin-top: 50px;
@@ -156,7 +194,10 @@
     flex-direction: column;
     margin-top: 0px;
   }
-  .body-active,.body-total-recovered,.body-total-confirmed,.body-total-death{
+  .body-active,
+  .body-total-recovered,
+  .body-total-confirmed,
+  .body-total-death {
     padding: 20px;
   }
 }
