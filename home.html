@@ -30,55 +30,63 @@
     </section>
 
     <section class="body-country">
-      <!-- <h1>Select a country</h1> -->
-      <form action="">
-        <button type="submit"><i class="material-icons">search</i></button>
-        <input type="text" placeholder="Select a Country" />
+      <form action="" class="body-country-form">
+        <label for="country">Select a Country:</label>
+        <select id="countriesDropDown" onchange="handleCountryChange(this)">
+          <option value="Global" >Global</option>
+        </select>
       </form>
     </section>
 
     <section class="body-stats">
       <div class="body-today">
         <div class="body-today-confirmed">
-          <div><h1>Confirmed</h1></div>
-          <div id="todayConfirmed"></div>
+          <div><h1>New Confirmed</h1></div>
+          <div class="todayconfirmed" id="todayConfirmed"></div>
         </div>
 
         <div class="body-today-recovered">
           <div>
-            <h1>Recovered</h1>
+            <h1>New Recovered</h1>
           </div>
-          <div id="todayRecovered"></div>
+          <div class="todayrecovered" id="todayRecovered"></div>
         </div>
 
         <div class="body-today-deaths">
           <div>
-            <h1>Deaths</h1>
+            <h1>New Deaths</h1>
           </div>
-          <div id="todayDeaths"></div>
+          <div class="todaydeaths" id="todayDeaths"></div>
         </div>
       </div>
 
       <div class="body-total">
         <div class="body-total-confirmed">
           <div><h1>Total Confirmed</h1></div>
-          <div id="conformedCases"></div>
+          <div class="totalconfirmed" id="totalConfirmed"></div>
         </div>
 
         <div class="body-total-recovered">
           <div>
             <h1>Total Recovered</h1>
           </div>
-          <div id="totalRecovered"></div>
+          <div class="totalrecovered" id="totalRecovered"></div>
         </div>
 
         <div class="body-total-death">
           <div>
             <h1>Total Deaths</h1>
           </div>
-          <div id="totalDeaths"></div>
+          <div class="totaldeaths" id="totalDeaths"></div>
         </div>
       </div>
+    </section>
+
+    <section class="body-today-date">
+      <div>
+        <h1>Last Updated :</h1>
+      </div>
+      <div class="todaydate" id="todayDate"></div>
     </section>
   </body>
 </html>
