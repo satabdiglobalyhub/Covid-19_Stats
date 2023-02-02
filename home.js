@@ -1,9 +1,13 @@
 async function getCountryListapi() {
   try {
+    document.querySelector("#loading-message").style.display = "block";
+
     const jsondataCountries = await fetch(
       "https://api.covid19api.com/countries"
     );
     const jsdataCountries = await jsondataCountries.json();
+
+    document.querySelector("#loading-message").style.display = "none";
 
     let countriesDropDown = document.getElementById("countriesDropDown");
 
@@ -17,7 +21,7 @@ async function getCountryListapi() {
       countriesDropDown.appendChild(option);
     });
   } catch (error) {
-    console.error(`Error fetching list of Countries`);
+    alert(`Error fetching list of Countries`);
   }
 }
 
@@ -27,7 +31,7 @@ async function handleCountryChange(selected) {
     deleteOldData();
     getCovidapi(selectedUrl);
   } catch (error) {
-    console.error(`Error selecting countries from dropdown`);
+    alert(`Error selecting countries from dropdown`);
   }
 }
 
@@ -55,8 +59,13 @@ async function getCovidapi(selectedUrl) {
     if (value == Global) {
       getGlobalCovidapi();
     } else {
+      document.querySelector("#loading-message").style.display = "block";
+
       const jsondata = await fetch(selectedUrl);
       const jsdata = await jsondata.json();
+
+      document.querySelector("#loading-message").style.display = "none";
+
       let todaydata = jsdata[jsdata.length - 1];
       // console.log(todaydata);
 
@@ -96,14 +105,19 @@ async function getCovidapi(selectedUrl) {
       todayDate.append(todayDateNum1);
     }
   } catch (error) {
-    console.error(`Error fetching data of seleted Country`);
+    alert(`Error fetching data of seleted Country`);
   }
 }
 
 async function getGlobalCovidapi() {
   try {
+    document.querySelector("#loading-message").style.display = "block";
+
     let jsonCoviddata = await fetch("https://api.covid19api.com/summary");
     const jsCoviddata = await jsonCoviddata.json();
+
+    document.querySelector("#loading-message").style.display = "none";
+
     let todaydata = jsCoviddata.Global;
 
     let todayConformedCases = document.querySelector("#todayConfirmed");
@@ -141,7 +155,7 @@ async function getGlobalCovidapi() {
     var todayDateNum1 = todayDateNum.toLocaleDateString("en-US");
     todayDate.append(todayDateNum1);
   } catch (error) {
-    console.error(`Error Fetching Global data`);
+    alert(`Error Fetching Global data`);
   }
 }
 
