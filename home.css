@@ -10,6 +10,19 @@
   height: 100vh;
 }
 
+#loading-message {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: xx-large;
+  font-weight: 1000;
+  background-color: white;
+  color: black;
+}
+
 .body-head {
   display: flex;
   justify-content: center;
@@ -62,7 +75,7 @@
   border: 1px solid black;
   border-radius: 5px;
   background-color: orange;
-  box-shadow: 5px 5px grey;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   padding: 5px;
 }
 .body-today-recovered {
@@ -73,7 +86,7 @@
   border: 1px solid black;
   border-radius: 5px;
   background-color: greenyellow;
-  box-shadow: 5px 5px grey;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   padding: 5px;
 }
 .body-today-deaths {
@@ -84,7 +97,7 @@
   border: 1px solid black;
   border-radius: 5px;
   background-color: #c50808;
-  box-shadow: 5px 5px grey;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   padding: 5px;
 }
 
@@ -113,7 +126,7 @@
   border: 1px solid black;
   border-radius: 5px;
   background-color: orange;
-  box-shadow: 5px 5px grey;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   padding: 5px;
 }
 .body-total-recovered {
@@ -124,7 +137,7 @@
   border: 1px solid black;
   border-radius: 5px;
   background-color: greenyellow;
-  box-shadow: 5px 5px grey;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   padding: 5px;
 }
 .body-total-death {
@@ -135,7 +148,7 @@
   border: 1px solid black;
   border-radius: 5px;
   background-color: #c50808;
-  box-shadow: 5px 5px grey;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   padding: 5px;
 }
 
