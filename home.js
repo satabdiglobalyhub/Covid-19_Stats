@@ -24,10 +24,28 @@ async function getCountryListapi() {
 async function handleCountryChange(selected) {
   try {
     const selectedUrl = `https://api.covid19api.com/country/${selected.value}`;
+    deleteOldData();
     getCovidapi(selectedUrl);
   } catch (error) {
     console.error(`Error selecting countries from dropdown`);
   }
+}
+
+function deleteOldData() {
+  let todayConformedCases = document.querySelector("#todayConfirmed");
+  todayConformedCases.innerHTML = "";
+  let todayRecoveredCases = document.querySelector("#todayRecovered");
+  todayRecoveredCases.innerHTML = "";
+  let todayDeathCases = document.querySelector("#todayDeaths");
+  todayDeathCases.innerHTML = "";
+  let totalConformedCases = document.querySelector("#totalConfirmed");
+  totalConformedCases.innerHTML = "";
+  let totalRecoveredCases = document.querySelector("#totalRecovered");
+  totalRecoveredCases.innerHTML = "";
+  let totalDeathCases = document.querySelector("#totalDeaths");
+  totalDeathCases.innerHTML = "";
+  let todayDate = document.querySelector("#todayDate");
+  todayDate.innerHTML = "";
 }
 
 async function getCovidapi(selectedUrl) {
@@ -68,9 +86,9 @@ async function getCovidapi(selectedUrl) {
       totalDeathCases.append(totalDeathNum1);
 
       let totalRecoveredCases = document.querySelector("#totalRecovered");
-      let totalRecoveredNum = totalConformedNum - totalDeathNum;
-      var totalRecoveredNum1 = totalRecoveredNum.toLocaleString("hi-IN");
-      totalRecoveredCases.append(totalRecoveredNum1);
+      // let totalRecoveredNum = totalConformedNum - totalDeathNum;
+      // var totalRecoveredNum1 = totalRecoveredNum.toLocaleString("hi-IN");
+      totalRecoveredCases.append(`DATA NOT AVAILABLE`);
 
       let todayDate = document.querySelector("#todayDate");
       const todayDateNum = new Date(todaydata.Date);
